@@ -3,18 +3,20 @@
 
 from setuptools import setup
 
+
+
 setup(
-    name='crypto-string',
-    version='0.0.1',
+    name='cryptoString',
+    version='0.0.2',
     author='andy6804tw',
     author_email='andy6804tw@yahoo.com.tw',
-    url='https://github.com/andy6804tw',
+    url='https://github.com/1010code/cryptoString',
     description='A module that returns alphanumeric strings.',
-    packages=['crypto_string'],
+    packages=['cryptoString'],
     install_requires=[],
     entry_points={
-        'console_scripts': [
-            'crypto-string=crypto_string:version'
+        'consoleScripts': [
+            'cryptoString=cryptoString:version'
         ]
     }
 )
