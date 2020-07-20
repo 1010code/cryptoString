@@ -8,3 +8,7 @@ pip install crypto_string
 ```
 
 ## Usage
+
+
+## Version
+v0.0.1
