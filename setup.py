@@ -10,11 +10,11 @@ setup(
     author_email='andy6804tw@yahoo.com.tw',
     url='https://github.com/andy6804tw',
     description='A module that returns alphanumeric strings.',
-    packages=['crypto-string'],
+    packages=['crypto_string'],
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'crypto-string=crypto-string:version'
+            'crypto-string=crypto_string:version'
         ]
     }
 )

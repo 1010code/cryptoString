@@ -1,3 +1,6 @@
 */__pycache__
 */.DS_Store
 .DS_Store
+crypto_string.egg-info
+build
+dist
