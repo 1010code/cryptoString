@@ -1,10 +1,10 @@
-# crypto_string
+# cryptoString
 A module that returns alphanumeric strings.
 
 ## Install
 
 ```
-pip install crypto_string
+pip install cryptoString
 ```
 
 ## Usage
