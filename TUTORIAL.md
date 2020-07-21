@@ -33,7 +33,7 @@ def version():
 ```
 
 ## setup.py 設定
-如果自己的 Python 專案想要讓大家能夠安裝到每個人 Python 環境中，一定要撰寫 `setup.py`。這裡教各位設定 `setup.py` 裡的資訊，這裡要讓程式知道模組裡面的 metadata 使得 PyPI 平台可以識別其專案內容。
+如果自己的 Python 專案想要讓大家能夠安裝到每個人 Python 環境中，一定要撰寫 `setup.py`。這裡教各位設定 `setup.py` 裡的資訊，這裡要讓程式知道模組裡面的 metadata 使得 PyPI 平台可以識別其專案內容。唯一值得一提的是 `entry_points` 還記得先前定義好的 `version()` 函式嗎，如果安裝好套件直接在終端機輸入 `cryptoString` 將會回傳版本號。因此 PyPI 不僅能夠下載匯入函式庫也能當作腳本語言，如果有寫過 Node.js 朋友一定對 npm 不陌生。其實 npm 與 PyPI 兩者做的內容都是一樣的差別在於一個是 JavaScript 的 Package，一個是 Python 的 Package。
 
 | 欄位名稱                      | 描述                       |
 |-------------------------------|----------------------------|
@@ -50,6 +50,7 @@ def version():
 | install_requires              | 此專案相依的套件           |
 | classifiers                   | 此專案的其他相關訊息       |
 | python_requires               | Python版本限制             |
+| entry_points                  | 設定shell script呼叫路徑 |
 
 ```py
 #!/usr/bin/env python
