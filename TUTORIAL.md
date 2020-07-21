@@ -2,7 +2,7 @@
 打包python module 到 PyPI 上
 
 ## 建立專案
-專案架構如下: 最外層資料夾要建立一個 `setup.py` 檔，該檔案是部署打包成PyPI可讀取的格式的設定檔。`cryptoString` 資料夾就是你想建立的 Package 名稱，資料夾內的 `__init__.py` 就可以自定義你個人化的函示庫。
+專案架構如下: 最外層資料夾要建立一個 `setup.py` 檔，該檔案是部署打包成PyPI可讀取的格式的設定檔。`cryptoString` 資料夾就是你想建立的 Package 名稱，資料夾內的 `__init__.py` 就可以自定義你個人化的函示庫(package)。
 
 ```
 .
