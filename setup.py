@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -10,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='cryptoString',
-    version='0.0.1',
+    version='1.0.0',
     author='andy6804tw',
     author_email='andy6804tw@yahoo.com.tw',
     url='https://github.com/1010code/cryptoString',

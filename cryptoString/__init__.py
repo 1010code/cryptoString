@@ -11,4 +11,4 @@ def RandomChar(num):
  
 
 def version():
-    print('version: 0.0.1')
+    print('version: 1.0.0')
