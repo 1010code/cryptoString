@@ -1,8 +1,8 @@
 ## 前言
-打包python module 到 PYPI 上
+打包python module 到 PyPI 上
 
 ## 建立專案
-專案架構如下: 最外層資料夾要建立一個 `setup.py` 檔，該檔案是部署打包成PYPI可讀取的格式的設定檔。`cryptoString` 資料夾就是你想建立的 Package 名稱，資料夾內的 `__init__.py` 就可以自定義你個人化的函示庫。
+專案架構如下: 最外層資料夾要建立一個 `setup.py` 檔，該檔案是部署打包成PyPI可讀取的格式的設定檔。`cryptoString` 資料夾就是你想建立的 Package 名稱，資料夾內的 `__init__.py` 就可以自定義你個人化的函示庫。
 
 ```
 .
@@ -33,7 +33,7 @@ def version():
 ```
 
 ## setup.py 設定
-如果自己的 Python 專案想要讓大家能夠安裝到每個人 Python 環境中，一定要撰寫 `setup.py`。這裡教各位設定 `setup.py` 裡的資訊，這裡要讓程式知道模組裡面的 metadata 使得 PYPI 平台可以識別其專案內容。
+如果自己的 Python 專案想要讓大家能夠安裝到每個人 Python 環境中，一定要撰寫 `setup.py`。這裡教各位設定 `setup.py` 裡的資訊，這裡要讓程式知道模組裡面的 metadata 使得 PyPI 平台可以識別其專案內容。
 
 | 欄位名稱                      | 描述                       |
 |-------------------------------|----------------------------|
@@ -92,10 +92,10 @@ python setup.py check
 ```
 
 ## 打包函式庫
-首先我們必須透過 `pip` 下載打包的套件(安裝一次即可)，這裏使用 `setuptools` 套件來打包函式庫。
+首先我們必須透過 `pip` 下載打包的套件(安裝一次即可)，這裏使用 `setuptools` 套件來打包函式庫以及 `wheel` 建立 wheel file。
 
 ```sh
-pip install setuptools
+pip install setuptools wheel
 ```
 
 安裝好 `setuptools` 後我們就能執行 `setup.py` 進行打包囉！
@@ -104,4 +104,19 @@ pip install setuptools
 python setup.py sdist bdist_wheel
 ```
 
+打包完成後可以看到有三個資料，分別是 `build`、`cryptoString.egg-info`、`dist`。
+
 ![](https://i.imgur.com/9rOjEOx.png)
+
+## 發佈到PyPI
+使用 `pip` 安裝 `twine` 套件(安裝一次即可)。此套件會把 `dist/*` 裡的相關資料發布到PyPI。
+
+```sh
+pip install twine
+```
+
+安裝完成後就能將剛打包好的資料發布到PyPI。發布前需要先到 [PyPI](https://pypi.org/) 註冊一個帳號。接著輸入以下指令時會要求你輸入帳密，輸入成功後就會幫你將函式庫上傳到PyPI囉！
+
+```py
+python -m twine upload dist/*
+```
