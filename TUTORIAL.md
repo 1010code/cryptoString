@@ -6,6 +6,7 @@
 
 ```
 .
+├── README.md
 ├── cryptoString
 │   └── __init__.py
 └── setup.py
@@ -83,3 +84,24 @@ setup(
     python_requires='>=3.5',
 )
 ```
+
+`setup.py` 寫完後，可以先通過命令校驗 setup 有沒有錯誤地方。正常會出現 `running check` 的字串。如果輸入指令後沒有跑出任何錯誤訊息代表正確無誤。
+
+```sh
+python setup.py check
+```
+
+## 打包函式庫
+首先我們必須透過 `pip` 下載打包的套件(安裝一次即可)，這裏使用 `setuptools` 套件來打包函式庫。
+
+```sh
+pip install setuptools
+```
+
+安裝好 `setuptools` 後我們就能執行 `setup.py` 進行打包囉！
+
+```sh
+python setup.py sdist bdist_wheel
+```
+
+![](https://i.imgur.com/9rOjEOx.png)
